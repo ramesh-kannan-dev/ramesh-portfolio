@@ -250,12 +250,12 @@ export default function Home() {
           <div className="relative flex items-center justify-center">
 
             <motion.img
-              src="\profile.jpg"
+              src="/profile.jpg"
               alt="profile"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="w-72 h-72 object-cover rounded-xl z-0 shadow-2xl"
+              className="w-56 h-56 md:w-72 md:h-72 object-cover rounded-xl z-0 shadow-2xl"
             />
 
             {/* LEFT TEXT */}
@@ -318,7 +318,7 @@ export default function Home() {
 
           <h2 className="text-4xl font-bold mb-20">Skills</h2>
 
-          <div className="flex items-center justify-center gap-20">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-20">
 
             {/* 🔹 LEFT WHEEL */}
             <div className="flex flex-col items-center">
@@ -326,7 +326,7 @@ export default function Home() {
                 animate={{ rotateY: totalRotate }}
                 transition={{ ease: "linear", duration: 0 }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="relative w-[260px] h-[260px] flex items-center justify-center"
+                className="relative w-[220px] h-[220px] md:w-[260px] md:h-[260px] flex items-center justify-center"
               >
                 {languages.map((skill, i) => {
                   const angle = (360 / languages.length) * i;
@@ -356,7 +356,7 @@ export default function Home() {
             </div>
 
             {/* 🔥 DIVIDER */}
-            <div className="w-[1px] h-40 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+            <div className="hidden md:block w-[1px] h-40 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
 
             {/* 🔹 CENTER WHEEL */}
             <div className="flex flex-col items-center">
@@ -364,7 +364,7 @@ export default function Home() {
                 animate={{ rotateY: totalRotate }}
                 transition={{ ease: "linear", duration: 0 }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="relative w-[260px] h-[260px] flex items-center justify-center"
+                className="relative w-[220px] h-[220px] md:w-[260px] md:h-[260px] flex items-center justify-center"
               >
                 {webtools.map((skill, i) => {
                   const angle = (360 / webtools.length) * i;
@@ -394,7 +394,7 @@ export default function Home() {
             </div>
 
             {/* 🔥 DIVIDER */}
-            <div className="w-[1px] h-40 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+            <div className="hidden md:block w-[1px] h-40 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
 
             {/* 🔹 RIGHT WHEEL */}
             <div className="flex flex-col items-center">
@@ -402,7 +402,7 @@ export default function Home() {
                 animate={{ rotateY: totalRotate }}
                 transition={{ ease: "linear", duration: 0 }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="relative w-[260px] h-[260px] flex items-center justify-center"
+                className="relative w-[220px] h-[220px] md:w-[260px] md:h-[260px] flex items-center justify-center"
               >
                 {others.map((skill, i) => {
                   const angle = (360 / others.length) * i;
@@ -541,7 +541,7 @@ hover:scale-[1.02] transform-gpu transition duration-300 shadow-md
 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)]">
 
               <img
-                src="\mentor.jpg"
+                src="/mentor.jpg"
                 className="w-full h-48 object-cover"
               />
 
